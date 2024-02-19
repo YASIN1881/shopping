@@ -3,6 +3,13 @@ module.exports = {
   content: ["./public/**/*.{html,js}"],
   theme: {
     extend: {
+      fontFamily: {
+        Poppins: "Poppins",/* 500 */
+        InterRegular: "Inter Regular",/* 400 */
+        InterSemiBold: "Inter SemiBold",/* 600 */ 
+        InterBold: "Inter Bold",/* 700 */
+        SpaceGroteskMedium: "SpaceGrotesk Medium", /* 500 */
+      },
       colors: {
         blue: "#377DFF",
         green: "#38CB89",
@@ -15,7 +22,7 @@ module.exports = {
         mainText: "#141718",
         primaryText: "#6C7275",
         seconderyText: "#232627",
-      },
+      }
     },
   },
   plugins: [],
