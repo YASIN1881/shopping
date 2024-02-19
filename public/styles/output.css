@@ -444,6 +444,62 @@ video {
   display: none;
 }
 
+@font-face {
+  font-family: "Poppins Medium";
+
+  /* 500 */
+
+  src: local("Poppins Medium"),
+            url("../public/font/Poppins/Poppins-Medium.ttf") format("ttf");
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+
+  /* 400 */
+
+  src: local("Inter Regular"),
+            url("../public/font/Inter/Inter-Regular.ttf") format("ttf");
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter SemiBold";
+
+  /* 600 */
+
+  src: local("Inter SemiBold"),
+        url("../public/font/Inter/Inter-SemiBold.ttf") format("ttf");
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter ";
+
+  /* 700 */
+
+  src: local("Inter Bold"),
+        url("../public/font/Inter/Inter-Bold.ttf") format("ttf");
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SpaceGrotesk Medium";
+
+  /* 500 */
+
+  src: local("SpaceGrotesk Medium");
+
+  src: url("../public/font/Space_Grotesk/SpaceGrotesk-Medium.ttf") format("ttf");
+
+  font-display: swap;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -542,4 +598,63 @@ video {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    padding-right: 8rem;
+    padding-left: 8rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    padding-right: 10rem;
+    padding-left: 10rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+    padding-right: 13rem;
+    padding-left: 13rem;
+  }
+}
+
+.h-11 {
+  height: 2.75rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.bg-blue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 125 255 / var(--tw-bg-opacity));
 }
