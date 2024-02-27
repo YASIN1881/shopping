@@ -5,10 +5,351 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping</title>
     <link rel="stylesheet" href="styles/output.css" />
+    <link rel="stylesheet" href="vendor/swiper/swiper.css">
+    <link rel="icon" href="image/svg/shopping.svg" type="image/svg" />
   </head>
-  <body>
-    <div class="container">
-      <div class="w-full h-11 bg-blue"></div>
-    </div>
+  <body class="relative">
+    <svg class="hidden">
+      <symbol id="ticket-percent" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M20.0181 12.8356L19.7727 13.5444H19.7727L20.0181 12.8356ZM20.0181 7.16437L20.2635 7.8731V7.8731L20.0181 7.16437ZM1.98189 12.8356L2.22727 13.5444H2.22727L1.98189 12.8356ZM1.98189 7.16437L1.73652 7.8731L1.73652 7.8731L1.98189 7.16437ZM14.5303 7.53033C14.8232 7.23744 14.8232 6.76256 14.5303 6.46967C14.2374 6.17678 13.7626 6.17678 13.4697 6.46967L14.5303 7.53033ZM7.46967 12.4697C7.17678 12.7626 7.17678 13.2374 7.46967 13.5303C7.76256 13.8232 8.23744 13.8232 8.53033 13.5303L7.46967 12.4697ZM5 18.25C3.20507 18.25 1.75 16.7949 1.75 15H0.25C0.25 17.6234 2.37665 19.75 5 19.75V18.25ZM20.25 15C20.25 16.7949 18.7949 18.25 17 18.25V19.75C19.6234 19.75 21.75 17.6234 21.75 15H20.25ZM17 1.75C18.7949 1.75 20.25 3.20507 20.25 5H21.75C21.75 2.37665 19.6234 0.25 17 0.25V1.75ZM5 0.25C2.37665 0.25 0.25 2.37665 0.25 5H1.75C1.75 3.20507 3.20507 1.75 5 1.75V0.25ZM20.2635 12.1269C19.3815 11.8216 18.75 10.9836 18.75 10H17.25C17.25 11.6424 18.3054 13.0363 19.7727 13.5444L20.2635 12.1269ZM18.75 10C18.75 9.01644 19.3815 8.17844 20.2635 7.8731L19.7727 6.45565C18.3054 6.96367 17.25 8.35761 17.25 10H18.75ZM3.25 10C3.25 10.9836 2.61845 11.8216 1.73652 12.1269L2.22727 13.5444C3.69461 13.0363 4.75 11.6424 4.75 10H3.25ZM1.73652 7.8731C2.61845 8.17844 3.25 9.01644 3.25 10H4.75C4.75 8.35762 3.69462 6.96367 2.22727 6.45565L1.73652 7.8731ZM21.75 6V5H20.25V6H21.75ZM20.25 14V15H21.75V14H20.25ZM0.25 14V15H1.75V14H0.25ZM1.75 6V5H0.25V6H1.75ZM17 18.25H5V19.75H17V18.25ZM17 0.25H5V1.75H17V0.25ZM1.73652 12.1269C1.05785 12.3619 0.25 12.9975 0.25 14H1.75C1.75 13.9441 1.77081 13.8708 1.85172 13.7813C1.9366 13.6873 2.06974 13.5989 2.22727 13.5444L1.73652 12.1269ZM20.2635 7.8731C20.9422 7.63813 21.75 7.00246 21.75 6H20.25C20.25 6.05587 20.2292 6.12917 20.1483 6.21871C20.0634 6.31265 19.9303 6.40111 19.7727 6.45565L20.2635 7.8731ZM2.22727 6.45565C2.06974 6.40111 1.9366 6.31265 1.85172 6.21871C1.77081 6.12917 1.75 6.05587 1.75 6H0.25C0.25 7.00246 1.05785 7.63813 1.73652 7.8731L2.22727 6.45565ZM19.7727 13.5444C19.9303 13.5989 20.0634 13.6873 20.1483 13.7813C20.2292 13.8708 20.25 13.9441 20.25 14H21.75C21.75 12.9975 20.9422 12.3619 20.2635 12.1269L19.7727 13.5444ZM8.25 7C8.25 7.13807 8.13807 7.25 8 7.25V8.75C8.9665 8.75 9.75 7.9665 9.75 7H8.25ZM8 7.25C7.86193 7.25 7.75 7.13807 7.75 7H6.25C6.25 7.9665 7.0335 8.75 8 8.75V7.25ZM7.75 7C7.75 6.86193 7.86193 6.75 8 6.75V5.25C7.0335 5.25 6.25 6.0335 6.25 7H7.75ZM8 6.75C8.13807 6.75 8.25 6.86193 8.25 7H9.75C9.75 6.0335 8.9665 5.25 8 5.25V6.75ZM14.25 13C14.25 13.1381 14.1381 13.25 14 13.25V14.75C14.9665 14.75 15.75 13.9665 15.75 13H14.25ZM14 13.25C13.8619 13.25 13.75 13.1381 13.75 13H12.25C12.25 13.9665 13.0335 14.75 14 14.75V13.25ZM13.75 13C13.75 12.8619 13.8619 12.75 14 12.75V11.25C13.0335 11.25 12.25 12.0335 12.25 13H13.75ZM14 12.75C14.1381 12.75 14.25 12.8619 14.25 13H15.75C15.75 12.0335 14.9665 11.25 14 11.25V12.75ZM13.4697 6.46967L7.46967 12.4697L8.53033 13.5303L14.5303 7.53033L13.4697 6.46967Z"
+          fill="#141718"
+        />
+      </symbol>
+
+      <symbol id="arrow-right" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M3.75 9H14.25"
+          stroke="#377DFF"
+          stroke-width="1.125"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M9.75 13.5L14.25 9"
+          stroke="#377DFF"
+          stroke-width="1.125"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M9.75 4.5L14.25 9"
+          stroke="#377DFF"
+          stroke-width="1.125"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+
+      <symbol id="union" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M11.4419 1.44194C11.686 1.19786 11.686 0.802136 11.4419 0.558058C11.1979 0.313981 10.8021 0.313981 10.5581 0.558058L6 5.11612L1.44194 0.558058C1.19786 0.313981 0.802136 0.313981 0.558058 0.558058C0.313981 0.802136 0.313981 1.19786 0.558058 1.44194L5.11612 6L0.558058 10.5581C0.313981 10.8021 0.313981 11.1979 0.558058 11.4419C0.802136 11.686 1.19786 11.686 1.44194 11.4419L6 6.88388L10.5581 11.4419C10.8021 11.686 11.1979 11.686 11.4419 11.4419C11.686 11.1979 11.686 10.8021 11.4419 10.5581L6.88388 6L11.4419 1.44194Z"
+          fill="#343839"
+        />
+      </symbol>
+
+      <symbol id="search" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.5 17.5L21 21M20 10.5C20 5.25329 15.7467 1 10.5 1C5.25329 1 1 5.25329 1 10.5C1 15.7467 5.25329 20 10.5 20C15.7467 20 20 15.7467 20 10.5Z" stroke="#141718" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+
+      <symbol id="user" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.5588 18.5488C16.5654 15.8918 14.0036 14 11 14C7.99638 14 5.4346 15.8918 4.44117 18.5488M17.5588 18.5488C19.6672 16.7154 21 14.0134 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 14.0134 2.33285 16.7154 4.44117 18.5488M17.5588 18.5488C15.8031 20.0756 13.5095 21 11 21C8.49052 21 6.19694 20.0756 4.44117 18.5488M14 8C14 9.65685 12.6569 11 11 11C9.34315 11 8 9.65685 8 8C8 6.34315 9.34315 5 11 5C12.6569 5 14 6.34315 14 8Z" stroke="#141718" stroke-width="1.5" stroke-linejoin="round"/>
+        </symbol>
+        
+      <symbol id="shoppingBag" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+          <path fill-rule="evenodd" d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 0 0 4.25 22.5h15.5a1.875 1.875 0 0 0 1.865-2.071l-1.263-12a1.875 1.875 0 0 0-1.865-1.679H16.5V6a4.5 4.5 0 1 0-9 0ZM12 3a3 3 0 0 0-3 3v.75h6V6a3 3 0 0 0-3-3Zm-3 8.25a3 3 0 1 0 6 0v-.75a.75.75 0 0 1 1.5 0v.75a4.5 4.5 0 1 1-9 0v-.75a.75.75 0 0 1 1.5 0v.75Z" clip-rule="evenodd" />
+        </symbol>
+
+        <symbol id="menu" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1H11M1 5H11M1 9H11" stroke="#141718" stroke-width="1.5" stroke-linecap="round"/>
+          </symbol>
+
+        <symbol id="close" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976309 1.31658 -0.0976309 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L8.41421 7L13.7071 12.2929C14.0976 12.6834 14.0976 13.3166 13.7071 13.7071C13.3166 14.0976 12.6834 14.0976 12.2929 13.7071L7 8.41421L1.70711 13.7071C1.31658 14.0976 0.683418 14.0976 0.292893 13.7071C-0.0976309 13.3166 -0.0976309 12.6834 0.292893 12.2929L5.58579 7L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683418 0.292893 0.292893Z" fill="#6C7275"/>
+          </symbol>
+        
+        <symbol id="chevron-down" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.27246 1L7.27246 7L13.2725 1" stroke="#141718" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </symbol>
+        
+        <symbol id="like" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6924 4.58373C11.3055 4.95505 10.6945 4.95505 10.3076 4.58373L9.6152 3.91927C8.80477 3.14154 7.70994 2.66667 6.5 2.66667C4.01472 2.66667 2 4.68139 2 7.16667C2 9.5493 3.28979 11.5167 5.15176 13.1332C7.01532 14.7511 9.2434 15.8241 10.5746 16.3717C10.853 16.4862 11.147 16.4862 11.4254 16.3717C12.7566 15.8241 14.9847 14.7511 16.8482 13.1332C18.7102 11.5167 20 9.54929 20 7.16667C20 4.68139 17.9853 2.66667 15.5 2.66667C14.2901 2.66667 13.1952 3.14154 12.3848 3.91927L11.6924 4.58373ZM11 2.47624C9.83211 1.35548 8.24649 0.666672 6.5 0.666672C2.91015 0.666672 0 3.57682 0 7.16667C0 13.5349 6.97034 17.0517 9.81379 18.2214C10.5796 18.5364 11.4204 18.5364 12.1862 18.2214C15.0297 17.0517 22 13.5349 22 7.16667C22 3.57682 19.0899 0.666672 15.5 0.666672C13.7535 0.666672 12.1679 1.35548 11 2.47624Z" fill="#141718"/>
+          </symbol>
+        
+        <symbol id="instagram" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="20" height="20" rx="4" stroke="#141718" stroke-width="1.5"/>
+            <circle cx="18" cy="6" r="1" fill="#141718"/>
+            <circle cx="12" cy="12" r="5" stroke="#141718" stroke-width="1.5"/>
+          </symbol>
+
+        <symbol id="facebook" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 3H15C12.2386 3 10 5.23858 10 8V10H6V14H10V21H14V14H18V10H14V8C14 7.44772 14.4477 7 15 7H18V3Z" stroke="#141718" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </symbol>
+
+        <symbol id="youtube" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="3" width="20" height="18" rx="4" stroke="#141718" stroke-width="1.5"/>
+            <path d="M10.4472 8.72361L15.2111 11.1056C15.9482 11.4741 15.9482 12.5259 15.2111 12.8944L10.4472 15.2764C9.78231 15.6088 9 15.1253 9 14.382V9.61803C9 8.87465 9.78231 8.39116 10.4472 8.72361Z" stroke="#141718" stroke-width="1.5" stroke-linecap="round"/>
+          </symbol>
+
+        <symbol id="arrow-left" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.66669 16H25.3334" stroke="#6C7275" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6.66669 16L14.6667 24" stroke="#6C7275" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6.66669 16L14.6667 8" stroke="#6C7275" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </symbol>
+
+        <symbol id="arrow-right" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.66666 16H25.3333" stroke="#6C7275" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M17.3333 24L25.3333 16" stroke="#6C7275" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M17.3333 8L25.3333 16" stroke="#6C7275" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </symbol>
+            
+    </svg>
+    <header>
+      <!-- Start Notification Bar -->
+      <div class="w-full bg-seconderyBg py-2.5 relative" id="notification">
+        <div class="flex justify-center items-center gap">
+          <div>
+            <svg class="w-4 h-4 md:w-6 md:h-6">
+              <use href="#ticket-percent"></use>
+            </svg>
+          </div>
+          <div class="mx-3 mb-[2px]">
+            <span class="font-InterSemiBold text-xs/5 md:text-sm/[22px] text-onyxColor">
+              30% off storewide — Limited time!
+            </span>
+          </div>
+          <div class="hidden md:block border-b border-blue pb-[3px] hover:pb-0 group">
+            <a href="#" class="flex items-center text-blue font-InterMedium text-sm/6">
+              Shop Now
+              <svg class="w-[18px] h-[18px] ml-1 group-hover:ml-2">
+                <use href="#arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+          <!-- Start Close Notification Bar -->
+          <div class="hover:cursor-pointer absolute right-5" id="closeNotification">
+            <svg class="w-4 h-4 md:w-5 md:h-5">
+              <use href="#union"></use>
+            </svg>
+          </div>
+          <!-- Finish Close Notification Bar -->
+        </div>
+      </div>
+      <!-- Finish Notification Bar -->
+
+      <!-- Start Navigation Bar -->
+      <div class="container">
+        <div class="navigation py-[18px]">
+          <div class="flex justify-between items-center">
+            <!-- Start Logo -->
+              <svg class="block sm:hidden w-4 h-4 mr-1" id="menuFly">
+                <use href="#menu"></use>
+              </svg>
+              <a href="index.html" class="flex items-center">
+                <p class="font-PoppinsMedium text-base sm:text-lg/[18px] md:text-xl/5 lg:text-2xl/6">3legant<span class="text-primaryText">.</span></p>
+              </a>
+            <!-- Finish Logo -->
+  
+            <!-- Start Menu -->
+              <ul class="hidden sm:flex gap-1.5 sm:gap-2 md:gap-5 xl:gap-10 *:font-SpaceGroteskMedium *:text-sm/6 *:text-primaryText">
+                <li>
+                  <a href="#" class="text-mainText">Home</a>
+                </li>
+                <li>
+                  <a href="#">Shop</a>
+                </li>
+                <li>
+                  <a href="#">Product</a>
+                </li>
+                <li>
+                  <a href="#">Contact Us</a>
+                </li>
+              </ul>
+            <!-- Finish Menu -->
+  
+            <!-- Start Icons -->
+            <div class="flex gap-1 sm:gap-x-2 md:gap-x-4">
+              <!-- Search Icon -->
+              <div class="cursor-pointer hidden sm:block" id="search">
+                <svg class="w-6 h-6">
+                  <use href="#search"></use>
+                </svg>
+                <!-- User Account Icon -->
+              </div>
+              <!-- User Icon -->
+              <a href="#" class="userShow">
+                <svg class="w-6 h-6">
+                  <use href="#user"></use>
+                </svg>
+              </a>
+              <!-- Shopping Bag Icon -->
+              <a href="#">
+                <svg class="w-6 h-6">
+                  <use href="#shoppingBag"></use>
+                </svg>
+                <span></span>
+              </a>
+            </div>
+            <!-- Finish Icons -->
+          </div>
+        </div>
+      </div>
+      <!-- Finish Navigation Bar -->
+
+      <!-- Start Fly Menu -->
+      <div class="absolute left-[-343px] top-0 w-[343px] bg-background p-6 z-20 transition-all" id="flymenu">
+          <!-- Header Fly Menu -->
+          <div class="flex justify-between items-center">
+            <p class="font-PoppinsMedium text-base">3legant<span class="text-primaryText">.</span></p>
+            <svg class="w-[14px] h-[14px] cursor-pointer" id="closeFly">
+              <use href="#close"></use>
+            </svg>
+          </div>
+          <!-- Body & Footer Fly Menu -->
+          <div class="flex flex-col h-screen justify-between">
+            <!-- Body Fly Menu -->
+            <div>
+              <!-- Search Fly Menu -->
+              <div class="w-full my-4 px-4 py-[11px] border border-footerBg rounded-[5px] flex items-center gap-2.5">
+                <svg class="w-5 h-5">
+                  <use href="#search"></use>
+                </svg>
+                <input type="text" class="w-full font-InterRegular text-sm/6 focus:outline-none" placeholder="search">
+              </div>
+              <!-- Menu -->
+              <ul class="*:font-InterMedium *:text-sm/6 *:text-mainText *:border-b *:border-borderColor *:mb-4 [&>*:last-child]:mb-0 *:pb-4">
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li class="flex items-center justify-between">
+                  <a href="#">Shop</a>
+                  <svg class="w-3 h-[6px]">
+                    <use href="#chevron-down"></use>
+                  </svg>
+                </li>
+                <li class="flex items-center justify-between">
+                  <a href="#">Product</a>
+                  <svg class="w-3 h-[6px]">
+                    <use href="#chevron-down"></use>
+                  </svg>
+                </li>
+                <li>
+                  <a href="#">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Footer Fly Menu -->
+            <div>
+              <ul class="*:font-InterMedium *:text-lg/8 *:tracking-[-0.4px] *:text-primaryText *:border-b *:border-borderColor *:mb-2 [&>*:last-child]:mb-0 *:pb-2">
+                <li class="flex-center">
+                  <a href="#">Cart</a>
+                  <div class="text-mainText flex-center gap-[5px]">
+                    <svg class="w-[18.56px] h-[18px]">
+                      <use href="#shoppingBag"></use>
+                    </svg>
+                    <span class="size-5 rounded-full bg-footerBg text-background text-center leading-5">2</span>
+                  </div>
+                </li>
+                <li class="flex-center">
+                  <a href="#">Wishlist</a>
+                  <div class="text-mainText flex-center gap-[5px]">
+                    <svg class="w-[22px] h-[17.79px]">
+                      <use href="#like"></use>
+                    </svg>
+                    <span class="size-5 rounded-full bg-footerBg text-background text-center leading-5">2</span>
+                  </div>
+                </li>
+              </ul>
+              <button class="my-[19.33px] py-2.5 w-full rounded-md font-InterMedium text-lg/8 bg-footerBg text-background">Sign In</button>
+              <div class="flex gap-6">
+                <a href="https://www.instagram.com/?hl=en">
+                  <svg class="w-6 h-6">
+                    <use href="#instagram"></use>
+                  </svg>
+                </a>
+                <a href="https://facebook.com/">
+                  <svg class="w-6 h-6">
+                    <use href="#facebook"></use>
+                  </svg>
+                </a>
+                <a href="https://youtube.com/">
+                  <svg class="w-6 h-6">
+                    <use href="#youtube"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+      </div>
+      <!-- Finish Fly Menu -->
+
+      <!-- Start Cart Menu -->
+      <!-- Finish Cart Menu -->
+
+      <!-- Start Slider -->
+      <div class="container">
+        <div class="swiper">
+          <!-- Slider -->
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="image/banner/slider.png" alt="slider">
+            </div>
+            <div class="swiper-slide">
+              <img src="image/banner/slider.png" alt="slider">
+            </div>
+            <div class="swiper-slide">
+              <img src="image/banner/slider.png" alt="slider">
+            </div>
+          </div>
+          <!-- Swiper Pagination -->
+          <div class="swiper-pagination">
+            <span class="swiper-pagination-bullet">
+              <span class="swiper-pagination-bullet-active"></span>
+            </span>
+          </div>
+          <!-- Navigation Buttons -->
+          <div class="swiper-button-prev">
+              <svg>
+                <use href="#arrow-left"></use>
+              </svg>
+          </div>
+          <div class="swiper-button-next">
+              <svg>
+                <use href="#arrow-right"></use>
+              </svg>
+          </div>
+        </div>
+      </div>
+      <!-- Finish Slider -->
+
+      <!-- Start Slider Header -->
+      <div class="container">
+        <div class="mt-8 mb-10 flex flex-col lg:flex-row gap-6 xl:gap-y-6">
+          <div class="max-w-[311px] md:max-w-[540px] xl:max-w-[643px]">
+            <h1 class="font-PoppinsMedium text-[40px]/[44px] md:text-5xl/[60px] lg:text-6xl/[70px] xl:text-7xl/[76px] tracking-[-2px] text-mainText">
+              Simply Unique<span class="text-primaryText ml-1 md:mr-56 lg:mr-1">/</span>
+              Simply Better<span class="text-primaryText ml-1">.</span>
+            </h1>
+          </div>
+          <div>
+            <p class="text-primaryText lg:mr-[29px] lg:my-[50px]">
+              <span class="text-onyxColor">3legant</span>
+              is a gift & decorations store based in HCMC, Vietnam. Est since 2019. 
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Finish Slider Header -->
+    </header>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <script src="javascript/closeNotificationIcon.js"></script>
+    <script src="javascript/flyMenus.js"></script>
+    <script src="vendor/swiper/swiper.js"></script>
+    <script src="javascript/slider.js"></script>
   </body>
 </html>
