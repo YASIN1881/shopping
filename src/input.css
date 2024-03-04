@@ -4,6 +4,12 @@
 
 @layer base {
   @font-face {
+    font-family: "Poppins Regular"; /* 400 */
+    src: local("Poppins Regular"),
+      url("../public/font/Poppins/Poppins-Regular.ttf") format("ttf");
+    font-display: swap;
+  }
+  @font-face {
     font-family: "Poppins Medium"; /* 500 */
     src: local("Poppins Medium"),
       url("../public/font/Poppins/Poppins-Medium.ttf") format("ttf");
@@ -80,6 +86,35 @@
   .swiper-button-next::after {
     display: none !important;
   }
+
+  .shadowBox{
+    box-shadow: 0px 8px 16px rgba(15, 15, 15, 0.12)
+  }
+
+  .boxStyels {
+    @apply py-8 px-4 md:py-9 md:px-5 lg:py-10 lg:px-6 xl:py-12 xl:px-8 bg-seconderyBg w-[152px] xl:w-[262px]
+  }
+
+  .boxStyels > h4 {
+    @apply font-PoppinsMedium text-sm/[22px] sm:text-base/[23px] lg:text-lg/6 xl:text-xl text-mainText mt-4 mb-2
+  }
+
+  .boxStyels > p {
+    @apply font-PoppinsRegular text-xs/5 md:text-[13px]/[22px] xl:text-sm/6 text-primaryText
+  }
+
+  @media screen and (max-width: 768px) {
+    .boxes{
+      @apply flex-wrap gap-y-2 gap-x-6 justify-center
+    }
+  }
+
+  @media screen and (max-width: 410px) {
+    .boxStyels {
+      @apply flex-[1_1_auto] flex flex-col items-center
+    }
+  }
+
 }
 @layer utilities {
   .flex-center {

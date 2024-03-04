@@ -3,6 +3,9 @@ module.exports = {
   content: ["./public/**/*.{html,js}"],
   theme: {
     extend: {
+      flex: {
+        auto: "0 0 auto"
+      },
       container: {
         center: true,
         padding: {
@@ -21,6 +24,7 @@ module.exports = {
         },
       },
       fontFamily: {
+        PoppinsRegular: "Poppins Regular" /* 400 */,
         PoppinsMedium: "Poppins Medium" /* 500 */,
         InterRegular: "Inter Regular" /* 400 */,
         InterMedium: "Inter Medium",/* 500 */
@@ -34,6 +38,7 @@ module.exports = {
         orange: "#FFAB00",
         red: "#FF5630",
         background: "#FFFFFF",
+        primaryBg: "#FEFEFE",
         seconderyBg: "#F3F5F7",
         footerBg: "#141718",
         onyxColor: "#343839",
