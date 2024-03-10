@@ -15,6 +15,13 @@
       url("../public/font/Poppins/Poppins-Medium.ttf") format("ttf");
     font-display: swap;
   }
+
+  @font-face {
+    font-family: "Poppins SemiBold"; /* 600 */
+    src: local("Poppins SemiBold"),
+      url("../public/font/Poppins/Poppins-SemiBold.ttf") format("ttf");
+    font-display: swap;
+  }
   @font-face {
     font-family: "Inter"; /* 400 */
     src: local("Inter Regular"),
