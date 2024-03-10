@@ -46,8 +46,12 @@ module.exports = {
         mainText: "#141718",
         primaryText: "#6C7275",
         seconderyText: "#232627",
+        neutralsText: "23262f",
         borderColor: "#E8ECEF"
       },
+      backgroundImage: {
+        bannerImage: "url('../public/image/banner/background.png')"
+      }
     },
   },
   plugins: [],

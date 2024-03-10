@@ -103,6 +103,20 @@
     @apply font-PoppinsRegular text-xs/5 md:text-[13px]/[22px] xl:text-sm/6 text-primaryText
   }
 
+  @media screen and (max-width: 1022px) {
+    .newsletter {
+      background-color: #F2F4F6;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .newsletter {
+      background-image: url("../public/image/banner/background.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
   @media screen and (max-width: 768px) {
     .boxes{
       @apply flex-wrap gap-y-2 gap-x-6 justify-center
